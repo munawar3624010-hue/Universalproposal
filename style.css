@@ -1,32 +1,18 @@
 /* ================= GLOBAL STYLES ================= */
-*page {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.body, .html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('whatsapp-image.jpeg') no-repeat center center;
-    background-size: cover; /* image screen cover kare */
-    overflow: hidden;       /* extra scroll hata de */
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
 }
-
-.body {
-    display: flex;
-    justify-content: center;  /* horizontal center */
-    align-items: center;      /* vertical center */
-    background: url('whatsapp-image.jpeg') no-repeat center center;
-    background-size: contain; /* fit image fully inside screen */
-    background-color: #f5f5f5; /* fallback color */
-}
-
 
 /* ================= PAGE BASE ================= */
 .page {
@@ -437,16 +423,15 @@
 
 .world-bg {
   width: 100%;
-  height: auto;
+  height: 100vh;
   border-radius: 16px;
   overflow: hidden;
 }
 
-.img {
-    width: 80%;
-    max-width: 600px;
-    height: auto;
-    animation: float 3s ease-in-out infinite;
+.world-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ================= GLOW ANIMATION ================= */
@@ -463,13 +448,6 @@
   .long-message, .poetry, .final-message { padding: clamp(12px,4vw,25px); margin: clamp(20px,3vh,30px) auto; }
   .welcome-title { font-size: clamp(1.5em,6vw,2em); }
   .sub-title { font-size: clamp(0.85em,3vw,1em); }
-}
-
-/* Smooth float animation */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
 }
 
 /* =========================================================
