@@ -431,7 +431,7 @@ body, html {
 .world-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* show full image without cutting */
 }
 
 /* ================= GLOW ANIMATION ================= */
