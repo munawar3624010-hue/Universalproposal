@@ -5,14 +5,17 @@
   box-sizing: border-box;
 }
 
-body, html {
-  width: 100%;
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center content horizontally */
+    justify-content: center; /* center content vertically */
+    min-height: 100vh; /* full height of viewport */
+    background-color: #000; /* example background */
+    text-align: center;
 }
+
 
 /* ================= PAGE BASE ================= */
 .page {
@@ -423,15 +426,17 @@ body, html {
 
 .world-bg {
   width: 100%;
-  height: 100vh;
+  height: auto;
   border-radius: 16px;
   overflow: hidden;
 }
 
-.world-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+img {
+    max-width: 100%; /* width will not exceed screen */
+    height: auto;    /* maintain aspect ratio */
+    display: block;
+    margin: 20px auto; /* center image */
+   object-fit: cover;
 }
 
 /* ================= GLOW ANIMATION ================= */
