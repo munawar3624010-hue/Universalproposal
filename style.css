@@ -426,6 +426,10 @@ body, html {
   height: 100vh;
   border-radius: 16px;
   overflow: hidden;
+  background-image: url('your-image.jpg');
+  background-size: cover;   /* fills container */
+  background-position: center; /* centers image */
+  background-repeat: no-repeat;
 }
 
 .world-bg img {
