@@ -61,21 +61,21 @@ function showPage(pageNumber) {
 
 // Login validation
 function goToPage2(event) {
-
     if(event) event.preventDefault();
 
     const usernameInput = document.querySelector("#page1 input[type='text']").value.trim();
     const passwordInput = document.querySelector("#page1 input[type='password']").value.trim();
 
     if(usernameInput === correctUsername && passwordInput === correctPassword){
-    heartExplosion(window.innerWidth/2, window.innerHeight/2);
-    
-    // 1️⃣ Simple Page 2 open (no animation)
-    // showPage(2);
+        // Heart explosion animation
+        heartExplosion(window.innerWidth/2, window.innerHeight/2);
 
-    // 2️⃣ Agar cinematic black hole + galaxy effect chahiye
-    suckToPage2({clientX: window.innerWidth/2, clientY: window.innerHeight/2});
-}
+        // Page 2 open with cinematic effect
+        suckToPage2({clientX: window.innerWidth/2, clientY: window.innerHeight/2});
+    } else {
+        alert("❌ Wrong Username or Password! Try Again.");
+    }
+} // ✅ closing brace added
 
 
 // Go to Page 3
